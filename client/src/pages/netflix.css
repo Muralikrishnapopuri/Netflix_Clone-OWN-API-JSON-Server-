@@ -1,0 +1,94 @@
+@media screen and (min-width:900px) and (max-width:1536px) {
+    .background-image{
+        width:100%;
+      }
+      .container {
+        top:200px;
+        left:100px;
+      }
+      .logo img {
+        width:600px;
+      }
+      .buttons {
+        gap:1rem;
+        padding:1rem;
+      }
+      .buttons button{
+        border:none;
+        background-color:white;
+        color:black;
+        padding:0.3rem;
+        border-radius:7px;
+        gap:0.3rem;
+        font-size:1rem;
+        padding:0 10px;
+        font-weight:500;
+      }
+      #fa{
+        background-color:#E50914 ;
+        color:white;
+        padding:3px 10px;
+
+      }
+      #fa:hover {
+        background-color: red;
+      }
+      #mo {
+        font-size:0.7rem;
+      }
+      .contentt {
+        display:grid;
+        grid-template-columns: auto auto auto auto auto;
+        padding:20px;
+    }
+    .contentt  div {
+        padding:20px;
+      }
+}    
+@media screen and (min-width:300px) and (max-width:900px){
+  .background-image{
+    width:100%;
+    margin-top:100px;
+  }
+  .container{
+    top:150px;
+    left:20px;
+  }
+  .logo img{
+     width:200px;
+
+  }
+  .buttons {
+    gap:1rem;
+    padding:1rem;
+  }
+  .buttons button{
+    border:none;
+    background-color:white;
+    color:black;
+    padding:0.3rem;
+    border-radius:7px;
+    gap:0.3rem;
+    font-size:1rem;
+  }
+  #fa{
+    background-color:#E50914 ;
+    color:white;
+    padding:3px 10px;
+
+  }
+  #fa:hover {
+    background-color: red;
+  }
+  #mo {
+    font-size:0.7rem;
+  }
+  .contentt {
+    display:grid;
+    grid-template-columns: auto auto ;
+}
+.contentt  div {
+    padding:20px 0;
+  }
+
+}

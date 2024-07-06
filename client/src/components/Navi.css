@@ -1,0 +1,13 @@
+@media screen and (min-width:900px) and (max-width:1536px) {
+    .menu {
+        display: none;
+    }
+}
+@media screen and (min-width:300px) and (max-width:900px){
+  .menu-links {
+     display: none;
+  }   
+}
+ul {
+    list-style-type:none;
+}
