@@ -2,9 +2,9 @@
 
 You can use my API for movie data - <a href="https://krishdb.onrender.com/krishdb">https://krishdb.onrender.com/krishdb</a>
 
-<p>Frontend Technologies -
-HTML, CSS, styled components, formik, axios, firebase, React.js.
-Backend Technologies -
-Node.js , express, cors.</p>
+<h3Frontend Technologies -</h3>
+<p>HTML, CSS, styled components, formik, axios, firebase, React.js.</p>
+<h3>Backend Technologies -</h3>
+<p>Node.js , express, cors.</p>
 
 
