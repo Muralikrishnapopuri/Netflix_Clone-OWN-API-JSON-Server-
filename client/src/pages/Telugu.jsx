@@ -4,6 +4,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import { ThreeDots } from 'react-loader-spinner'
 import './netflix.css';
 export default function Telugu() {
     const [ cookies ,setCookie , removeCookie ] = useCookies("movieId");
@@ -27,7 +28,7 @@ export default function Telugu() {
       <Navi/>
       <div>
            
-           { telugu && 
+           { telugu[0] ?
  
            
            <div className="data-body">
@@ -43,6 +44,10 @@ export default function Telugu() {
                    )
                  } 
                </div>
+           </div>
+           :
+           <div className='loader' style={{display:"flex",justifyContent:"center",marginTop:"7rem"}}>
+           <ThreeDots visible={true} height="80" width="80" color="#E50914" radius="9" ariaLabel="three-dots-loading" wrapperStyle={{}} wrapperClass=""/>
            </div>
            
            }

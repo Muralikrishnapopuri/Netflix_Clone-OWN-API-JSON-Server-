@@ -3,6 +3,7 @@ import Navi from '../components/Navi'
 import axios from 'axios';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { ThreeDots } from 'react-loader-spinner'
 import { useCookies } from 'react-cookie';
 import './netflix.css';
 export default function English() {
@@ -27,7 +28,7 @@ export default function English() {
       <Navi/>
       <div>
            
-           { english && 
+           { english[0] ?
  
            
            <div className="data-body">
@@ -44,8 +45,13 @@ export default function English() {
                  } 
                </div>
            </div>
+            :
+            <div className='loader' style={{display:"flex",justifyContent:"center",marginTop:"7rem"}}>
+            <ThreeDots visible={true} height="80" width="80" color="#E50914" radius="9" ariaLabel="three-dots-loading" wrapperStyle={{}} wrapperClass=""/>
+            </div>
            
            }
+
          </div>
     </Container>
   )

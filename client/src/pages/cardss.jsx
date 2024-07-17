@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {Link, useNavigate} from 'react-router-dom';
 import video from '../assets/video.mp4';
 import load from '../assets/load.jpg';
@@ -15,14 +15,14 @@ export default function Cardss({telugu,english,hindi,upcoming}) {
     const navigate = useNavigate(); 
 
     const [ cookies ,setCookie , removeCookie ] = useCookies("movieId");
-
+    
   return (
     <Container>
       <div>
        <div className="swiper">
        <h3 style={{marginTop:"3rem"}}>Upcoming Movies</h3>
           { 
-          upcoming ? 
+          upcoming[0] ? 
 
           <div className="swiper-body">
                
@@ -45,7 +45,7 @@ export default function Cardss({telugu,english,hindi,upcoming}) {
               <AiOutlineRight className='right'/>
           </div>
           :
-          <div className='loader'>
+          <div className='loader' style={{display:"flex",justifyContent:"center",marginTop:"7rem"}}>
           <ThreeDots visible={true} height="80" width="80" color="#E50914" radius="9" ariaLabel="three-dots-loading" wrapperStyle={{}} wrapperClass=""/>
           </div>
           

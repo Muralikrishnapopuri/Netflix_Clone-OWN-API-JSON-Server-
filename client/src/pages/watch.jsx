@@ -8,13 +8,14 @@ import {Cookies, useCookies} from 'react-cookie';
 import { FaPlay } from "react-icons/fa6"; 
 import{AiOutlinePlus} from 'react-icons/ai';
 import Purchase from './purchase';
+import { ThreeDots } from 'react-loader-spinner'
+
 
 export default function Watch() {
 
   const [cookie,setCookie,removeCookie] = useCookies("movieId");
 
   const [currentMovieData,setCurrentMovieData] = useState([]);
-
    useEffect(()=>{
         axios.get("https://krishdb.onrender.com/krishdb")
         .then(function(response){
@@ -24,6 +25,7 @@ export default function Watch() {
          movies.map(movie => {
            if(movie.id === cookie["movieId"]  ){
              setCurrentMovieData(movie);
+             
            }
  
          })
@@ -35,7 +37,9 @@ export default function Watch() {
 
   return (
     <Container>
-      <div className="player-body">
+      {
+        currentMovieData.id?
+        <div className="player-body">
         <div className="movie">
           <div className="movie-details">
             <div className='main'>
@@ -81,6 +85,12 @@ export default function Watch() {
           <Purchase className="d-none" />
           
       </div>
+        :
+        <div className='loader' style={{display:"flex",justifyContent:"center",marginTop:"7rem"}}>
+        <ThreeDots visible={true} height="80" width="80" color="#E50914" radius="9" ariaLabel="three-dots-loading" wrapperStyle={{}} wrapperClass=""/>
+        </div>
+      }
+     
     </Container>
   )
 }
